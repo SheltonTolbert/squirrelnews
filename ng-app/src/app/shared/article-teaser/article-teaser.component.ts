@@ -17,6 +17,7 @@ export class ArticleTeaserComponent implements AfterViewInit {
 
   @Input() articles: Article[];
   @Input() issue: any;
+  @Input() donate: any;
   @Input() hasMore: boolean;
   @Input() intended: boolean;
 

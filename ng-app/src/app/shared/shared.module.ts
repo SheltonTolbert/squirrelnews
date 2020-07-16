@@ -8,6 +8,7 @@ import { TranslatePipe } from './translate.pipe';
 import { ArticleTeaserComponent } from './article-teaser/article-teaser.component';
 import { MoreComponent } from './article-teaser/more/more.component';
 import { BackendInterceptor } from './backend.interceptor';
+import { DonateComponent } from './article-teaser/donate/donate.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { BackendInterceptor } from './backend.interceptor';
     ArticleTeaserComponent,
     ArticleComponent,
     MoreComponent,
+    DonateComponent
   ],
   imports: [
     CommonModule,

@@ -5,6 +5,9 @@
       <app-article [intended]="intended" [article]="article" [issueTitle]="issue.title"></app-article>
     </ion-slide>
   </ng-container>
+  <ion-slide *ngIf="donate">
+    <app-donate [data]="donate"></app-donate>
+  </ion-slide>
   <ion-slide *ngIf="hasMore">
     <app-more></app-more>
   </ion-slide>  
