@@ -22,28 +22,13 @@ export class AllPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.articles.getArchiveList().pipe(
-      // map( data => {
-      //   const mapped = new Map<number, { articles: Article[], expanded: boolean}>();
-      //   data.forEach( (value, key) => {
-      //     mapped.set(key, { articles: value, expanded: false});
-      //   });
-
-      //   return mapped;
-      // })
-      map( data => [ ...data.keys() ])
-    ).subscribe( result => this.issues = result );
   }
 
-  expand(key) {
-    const issue = this.articles$.get(key);
-    issue.expanded = !issue.expanded;
-    this.articles$.set(key, issue);
+
+  openIssue(issueId: number) {
+    this.nav.navigateForward(`tabs/home/previous/${issueId}`);
   }
 
-  openDetails(issue: string) {
-    this.nav.navigateForward(`tabs/home/all/${issue}`, { state: { issue } });
-  }
 
   handleBack() {
     this.state.activeTab.next('all');
