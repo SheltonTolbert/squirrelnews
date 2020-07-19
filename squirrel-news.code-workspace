@@ -5,9 +5,17 @@
 		},
 		{
 			"path": "firebase"
+		},
+		{
+			"path": "misc"
 		}
 	],
 	"settings": {
-		"deno.enable": false
+		"deno.enable": false,
+		"terminal.integrated.env.osx": {
+
+
+      "GOOGLE_APPLICATION_CREDENTIALS": "/Users/olivererxleben/Documents/projects/squirrel-news/squirrelnews/firebase/.runtimeconfig.json"
+		}
 	}
 }
