@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>{{ 'issues.all' | translate | async }}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button
@@ -11,21 +11,20 @@
 </ion-header>
 
 <ion-content>
-
-  <ion-list>
-    <ion-item *ngFor="let issue of issues" (click)="openDetails(issue)">
-      <ion-label> 
-        <h2>
-          {{ issue }}
-        </h2>
-        <!-- <app-expandable expandHeight="150px" [expanded]=" issue.value.expanded">
-          <div *ngFor="let article of issue.value.articles">
-            <h3 (click)="openDetails(article)">
-              {{article.position}}. {{article.title}}
-            </h3>
-          </div>
-        </app-expandable>  -->
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <ion-card (click)="openIssue(0)" class="one">
+    <!-- <img src="assets/headline.jpg" height="300" /> -->
+    <h2>Lorem Ipsum</h2>
+  </ion-card>
+  <ion-card (click)="openIssue(1)" class="two">
+    <!-- <img src="assets/headline.jpg" height="300" /> -->
+    <h2>Lorem Ipsum</h2>
+  </ion-card>
+  <ion-card (click)="openIssue(2)" class="three">
+    <!-- <img src="assets/headline.jpg" height="300" /> -->
+    <h2>Lorem Ipsum</h2>
+  </ion-card>
+  <ion-card (click)="openIssue(3)" class="four">
+    <!-- <img src="assets/headline.jpg" height="300" /> -->
+    <h2>Lorem Ipsum</h2>
+  </ion-card>
 </ion-content>
