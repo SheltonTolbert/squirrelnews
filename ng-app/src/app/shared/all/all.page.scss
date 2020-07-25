@@ -1,24 +1,20 @@
-ion-card {
-  min-height: 300px;
-
+ion-item {
+  margin: 25px 0;
 }
 
-.one {
+.teaser {
+  line-height: 24px;
+  font-size: 1em;
+}
+
+.teaser-img {
+  width: 100px;
+  height: 100px;
   background: url('/assets/headline.jpg') no-repeat top center;
   background-size: cover;
 }
 
-.two {
-  background: url('/assets/headline2.jpg') no-repeat top center;
-  background-size: cover;
-}
-
-.three {
-  background: url('/assets/headline3.jpg') no-repeat top center;
-  background-size: cover;
-}
-
-.four {
-  background: url('/assets/headline4.jpg') no-repeat top center;
-  background-size: cover;
+ion-toolbar.past-issues {
+  --opacity: 0.0;
+  --border-style: none;
 }

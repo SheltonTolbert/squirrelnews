@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar class="past-issues"> 
     <ion-title>{{ 'issues.all' | translate | async }}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button
@@ -10,21 +10,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card (click)="openIssue(0)" class="one">
-    <!-- <img src="assets/headline.jpg" height="300" /> -->
-    <h2>Lorem Ipsum</h2>
-  </ion-card>
-  <ion-card (click)="openIssue(1)" class="two">
-    <!-- <img src="assets/headline.jpg" height="300" /> -->
-    <h2>Lorem Ipsum</h2>
-  </ion-card>
-  <ion-card (click)="openIssue(2)" class="three">
-    <!-- <img src="assets/headline.jpg" height="300" /> -->
-    <h2>Lorem Ipsum</h2>
-  </ion-card>
-  <ion-card (click)="openIssue(3)" class="four">
-    <!-- <img src="assets/headline.jpg" height="300" /> -->
-    <h2>Lorem Ipsum</h2>
-  </ion-card>
+<ion-content padding>
+
+  <ion-list>
+    <ion-item lines="none" (click)="openIssue(0)">
+      <div class="teaser">
+        Seven-year-old raises thousands, LGBT+ rights in Dutch constitution, modular housing for formerly homeless
+      </div>
+      <div slot="end" class="teaser-img">
+      </div>
+    </ion-item>
+    <ion-item lines="none">
+      <div class="teaser">
+        Seven-year-old raises thousands, LGBT+ rights in Dutch constitution, modular housing for formerly homeless
+      </div>
+      <div slot="end" class="teaser-img">
+      </div>
+    </ion-item>
+    <ion-item lines="none">
+      <div class="teaser">
+        Seven-year-old raises thousands, LGBT+ rights in Dutch constitution, modular housing for formerly homeless
+      </div>
+      <div slot="end" class="teaser-img">
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>
