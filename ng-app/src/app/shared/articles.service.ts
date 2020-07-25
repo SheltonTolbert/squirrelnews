@@ -47,6 +47,15 @@ export class ArticlesService {
   // }
 
 
+  public getArchive() {
+    return this.db.collection('issues', ref => ref
+      .where('language', '==', this.state.activeLang.value)
+      .orderBy('publishedAt', 'desc')).snapshotChanges().pipe(
+        map( actions => actions.map( action => action.payload.doc.data() )),
+        tap(data => console.log('debug', data))
+      );
+  }
+
   public getArchiveList() {
     return this.db.collection<Article>('news', ref => ref
       .where('language', '==', this.state.activeLang.value)

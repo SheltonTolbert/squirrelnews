@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticlesService } from 'src/app/shared/articles.service';
 import { Observable } from 'rxjs';
-import { Article } from 'src/app/home/article';
-import { map } from 'rxjs/operators';
 import { NavController } from '@ionic/angular';
 import { StateService } from 'src/app/shared/state.service';
 
@@ -13,8 +11,8 @@ import { StateService } from 'src/app/shared/state.service';
 })
 export class AllPage implements OnInit {
 
-  articles$: Map<number, { articles: Article[], expanded: boolean}>;
-  issues = [];
+  issues$: Observable<any>;
+
   constructor(
     private nav: NavController,
     public articles: ArticlesService,
@@ -22,6 +20,7 @@ export class AllPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.issues$ = this.articles.getArchive();
   }
 
 

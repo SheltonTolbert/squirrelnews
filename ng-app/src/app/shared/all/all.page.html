@@ -13,7 +13,17 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item lines="none" (click)="openIssue(0)">
+    <ion-item *ngFor="let issue of (issues$ | async); let i = index" lines="none" (click)="openIssue(i)">
+      <div class="teaser">
+        {{issue.headline}}
+      </div>
+      <div slot="end" class="teaser-img" [ngStyle]="{
+        'background': 'url(' + issue.image + ') no-repeat top center',
+        'background-size': 'cover'
+      }">
+      </div>
+    </ion-item>
+    <!-- <ion-item lines="none">
       <div class="teaser">
         Seven-year-old raises thousands, LGBT+ rights in Dutch constitution, modular housing for formerly homeless
       </div>
@@ -26,13 +36,6 @@
       </div>
       <div slot="end" class="teaser-img">
       </div>
-    </ion-item>
-    <ion-item lines="none">
-      <div class="teaser">
-        Seven-year-old raises thousands, LGBT+ rights in Dutch constitution, modular housing for formerly homeless
-      </div>
-      <div slot="end" class="teaser-img">
-      </div>
-    </ion-item>
+    </ion-item> -->
   </ion-list>
 </ion-content>
