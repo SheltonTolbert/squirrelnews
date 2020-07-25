@@ -62,7 +62,7 @@ export const createNewIssue = functions.https.onRequest(async (request, response
     } else {
       // insert new issue
 
-      const ds = request.body.title.split(".");
+      const ds = request.body.language === 'de' ? request.body.title.split(".") : request.body.title.split("/") ;
 
       const element = {
         title: request.body.title,
