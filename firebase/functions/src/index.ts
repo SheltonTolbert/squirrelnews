@@ -63,6 +63,7 @@ export const createNewIssue = functions.https.onRequest(async (request, response
       // insert new issue
 
       const ds = request.body.language === 'de' ? request.body.title.split(".") : request.body.title.split("/") ;
+      const pubAt = request.body.language === 'de' ? new Date(`${ds[1]}/${parseInt(ds[0])+1}/${ds[2]}`) : new Date(`${ds[0]}/${parseInt(ds[1])+1}/${ds[2]}`);
 
       const element = {
         title: request.body.title,
@@ -70,7 +71,9 @@ export const createNewIssue = functions.https.onRequest(async (request, response
         teaser: request.body.teaser || null,
         language: request.body.language,
         dateCreated: new Date(),
-        publishedAt: new Date(`${ds[1]}/${parseInt(ds[0])+1}/${ds[2]}`)
+        publishedAt: pubAt,
+        image: request.body.image || null,
+        imageCredit: request.body.imageCredit || null
       }
 
       const result = await admin.firestore().collection('issues').add(element);
