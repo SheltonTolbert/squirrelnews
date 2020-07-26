@@ -1,4 +1,4 @@
-<ion-slides #articleSlider (ionSlideDidChange)="handleSlideChange()">
+<ion-slides #articleSlider (ionSlideDidChange)="handleSlideChange()" pager>
   <ng-container *ngIf="articles && articles.length > 0; else noArticles">
   <!-- <ng-container *ngIf="false; else noArticles"> -->
     <ion-slide *ngFor="let article of articles" (click)="openBrowser(article.url)">
