@@ -60,10 +60,10 @@ export class TabsPage implements OnInit, OnDestroy {
     });
 
     this.platform.ready().then(() => {
-      // if (this.platform.is('mobile') &&
-      //   this.platform.is('ios') ||
-      //   this.platform.is('android')
-      // ) {
+      if (this.platform.is('mobile') &&
+        this.platform.is('ios') ||
+        this.platform.is('android')
+      ) {
 
         PushNotifications.requestPermission().then(result => {
           if (result.granted) {
@@ -107,7 +107,7 @@ export class TabsPage implements OnInit, OnDestroy {
             // alert('Push action performed: ' + JSON.stringify(notification));
           }
         );
-      // }
+      }
 
     })
   }
