@@ -47,6 +47,11 @@ export const DE = {
   },
   app: {
     loading: 'Lade...'
+  },
+  donate: {
+    ownCase: 'in eigener Sache',
+    title: 'Würdest Du uns unterstützen?',
+    text: 'Squirrel News finanziert sich ausschließlich aus kleinen und mittleren Spenden. Dafür brauchen wir auch dich! Bitte unterstütze uns mit einem monatlichen oder jährlichen Betrag in Höhe deiner Wahl!'
   }
 };
 
@@ -99,5 +104,10 @@ export const EN = {
   },
   app: {
     loading: 'Loading...'
+  },
+  donate: {
+    ownCase: 'in own case',
+    title: 'Would you support us?',
+    text: 'Squirrel News finanziert sich ausschließlich aus kleinen und mittleren Spenden. Dafür brauchen wir auch dich! Bitte unterstütze uns mit einem monatlichen oder jährlichen Betrag in Höhe deiner Wahl!'
   }
 };

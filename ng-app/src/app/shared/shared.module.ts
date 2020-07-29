@@ -9,6 +9,7 @@ import { ArticleTeaserComponent } from './article-teaser/article-teaser.componen
 import { MoreComponent } from './article-teaser/more/more.component';
 import { BackendInterceptor } from './backend.interceptor';
 import { DonateComponent } from './article-teaser/donate/donate.component';
+import { CoverComponent } from './article-teaser/cover/cover.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { DonateComponent } from './article-teaser/donate/donate.component';
     ArticleTeaserComponent,
     ArticleComponent,
     MoreComponent,
-    DonateComponent
+    DonateComponent,
+    CoverComponent
   ],
   imports: [
     CommonModule,

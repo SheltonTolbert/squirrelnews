@@ -1,0 +1,17 @@
+<div class="content-wrapper">
+<img src="../../../../assets/icon/sn-logo.svg" width="40" alt="">
+
+<div>
+  <div class="issue-title">{{data.title}}</div>
+  <p>
+    {{data.headline}}
+  </p>
+  <!-- {{data | json}} -->
+  <div class="issue-image" [ngStyle]="{
+    'background': 'url(' + data.image + ') no-repeat top center',
+    'background-size': 'cover'}">
+
+  </div>
+</div>
+
+</div>
