@@ -73,7 +73,8 @@ export const createNewIssue = functions.https.onRequest(async (request, response
         dateCreated: new Date(),
         publishedAt: pubAt,
         image: request.body.image || null,
-        imageCredit: request.body.imageCredit || null
+        imageCredit: request.body.imageCredit || null,
+        issueURL: request.body.issueURL || null 
       }
 
       console.log('debug', request.body, ds, pubAt, element);
