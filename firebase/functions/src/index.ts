@@ -51,17 +51,15 @@ const checkToken = async (token: any ): Promise<boolean> => {
 
 
 export const createNewIssue = functions.https.onRequest(async (request, response) => {
-
   const tokenAccepted = await checkToken(request.headers['token']);
   if ( request.method === 'POST' && tokenAccepted) {
-
     if ( request.body.title === undefined || request.body.title === null) {
-      response.send(400).send('Required fields are not valid please check your request');
+      response.status(400).send('Required title is not valid please check your request');
     } else if (request.body.language === undefined || request.body.language === null) {
-      response.send(400).send('Required fields are not valid please check your request');
+      response.status(400).send('Required language is not valid please check your request');
     } else {
       // insert new issue
-
+      console.log('new issue')
       const ds = request.body.language === 'de' ? request.body.title.split(".") 
                                                 : request.body.title.split("/") ;
       const pubAt = request.body.language === 'de' ? new Date(`${ds[1]}/${parseInt(ds[0])}/${ds[2]}`)
@@ -84,6 +82,7 @@ export const createNewIssue = functions.https.onRequest(async (request, response
       response.status(200).json({
         message: `success`,
         inserted: result.id
+        // inserted: "xxx"
       });
     }
 
