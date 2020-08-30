@@ -8,9 +8,6 @@
 		},
 		{
 			"path": "misc"
-		},
-		{
-			"path": "react-tailwind"
 		}
 	],
 	"settings": {
