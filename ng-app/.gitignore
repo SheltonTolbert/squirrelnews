@@ -32,3 +32,5 @@ npm-debug.log*
 
 # special files
 src/environments/environment.firebase.ts
+android/app/google-services.json
+ios/App/GoogleService-Info.plist
