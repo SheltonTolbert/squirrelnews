@@ -61,9 +61,9 @@ export const createNewIssue = functions.https.onRequest(async (request, response
       // insert new issue
       console.log('new issue')
       const ds = request.body.language === 'de' ? request.body.title.split(".") 
-                                                : request.body.title.split("/") ;
+                                                : request.body.title.split("/");
       const pubAt = request.body.language === 'de' ? new Date(`${ds[1]}/${parseInt(ds[0])}/${ds[2]}`)
-                                                  : new Date(`${ds[0]}/${parseInt(ds[1])}/${ds[2]}`);
+                                                  : new Date(`${ds[1]}/${parseInt(ds[0])}/${ds[2]}`);
 
       const element = {
         title: request.body.title,
