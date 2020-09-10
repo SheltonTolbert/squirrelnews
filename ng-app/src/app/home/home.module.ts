@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import { ArticlesService } from '../shared/articles.service';
-import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { SharedModule } from '../shared/shared.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BackendInterceptor } from '../shared/backend.interceptor';
@@ -35,8 +34,8 @@ import { BackendInterceptor } from '../shared/backend.interceptor';
       }
     ])
   ],
-  declarations: [HomePage, ArticleDetailComponent],
-  entryComponents: [ArticleDetailComponent],
+  declarations: [HomePage],
+  entryComponents: [],
   providers: [
     ArticlesService,
     { provide: HTTP_INTERCEPTORS, useClass: BackendInterceptor, multi: true }
