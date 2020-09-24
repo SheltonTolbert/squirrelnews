@@ -3,13 +3,12 @@
     <ion-slide>
       <app-cover [data]="issue"></app-cover>
     </ion-slide>
-  <!-- <ng-container *ngIf="false; else noArticles"> -->
     <ion-slide *ngFor="let article of articles" (click)="openBrowser(article.url)">
       <app-article [intended]="intended" [article]="article" [issueTitle]="issue.title"></app-article>
     </ion-slide>
   </ng-container>
-  <ion-slide *ngIf="donate">
-    <app-donate [data]="donate"></app-donate>
+  <ion-slide *ngIf="issue">
+    <app-donate [data]="issue.donate || null"></app-donate>
   </ion-slide>
   <ion-slide *ngIf="hasMore">
     <app-more></app-more>

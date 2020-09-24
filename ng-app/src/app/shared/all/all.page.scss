@@ -3,13 +3,18 @@ ion-item {
 }
 
 .teaser {
-  line-height: 24px;
+  line-height: 20px;
   font-size: 1em;
+
+  h6 {
+    line-height: 10px;
+    font-size: 0.8em;
+  }
 }
 
 .teaser-img {
   width: 100px;
-  height: 100px;
+  height: 130px;
   background-size: cover;
 }
 

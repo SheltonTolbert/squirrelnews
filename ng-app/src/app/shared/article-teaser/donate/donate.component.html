@@ -6,13 +6,13 @@
 
   <div class="text-wrapper">
     <div class="category">
-      {{ 'donate.ownCase' | translate | async | uppercase}}
+      {{ data ? (data.case | uppercase) : ('donate.ownCase' | translate | async | uppercase) }}
     </div>
     <div class="title">
-      {{ 'donate.title' | translate | async }}
+      {{ data ? (data.title | uppercase) : ('donate.title' | translate | async | uppercase) }}
     </div>
     <p>
-      {{ 'donate.text' | translate | async}}
+      {{ data ? (data.text | uppercase) : ('donate.text' | translate | async | uppercase) }}
     </p>
   </div>
 </div>

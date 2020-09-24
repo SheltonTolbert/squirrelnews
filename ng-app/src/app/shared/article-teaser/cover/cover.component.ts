@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Issue } from '../../models';
 
 @Component({
   selector: 'app-cover',
@@ -7,10 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CoverComponent implements OnInit {
 
-  @Input() data: any;
+  @Input() data: Issue;
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.data);
+  }
 
 }

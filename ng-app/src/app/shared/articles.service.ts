@@ -6,6 +6,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Plugins } from '@capacitor/core';
 import { StateService } from './state.service';
 import { REFERENCE_PREFIX } from '@angular/compiler/src/render3/view/util';
+import { Issue } from './models';
 
 const { Storage } = Plugins;
 @Injectable()
@@ -47,7 +48,7 @@ export class ArticlesService {
   // }
 
 
-  public getArchive() {
+  public getArchive(): Observable<Partial<Issue>[]> {
     return this.db.collection('issues', ref => ref
       .where('language', '==', this.state.activeLang.value)
       .orderBy('publishedAt', 'desc')).snapshotChanges().pipe(

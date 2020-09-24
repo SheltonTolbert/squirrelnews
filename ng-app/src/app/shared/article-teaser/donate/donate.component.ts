@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Donate } from '../../models';
 
 @Component({
   selector: 'app-donate',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DonateComponent implements OnInit {
 
-  @Input() data: any;
+  @Input() data: Donate;
 
   constructor() { }
 

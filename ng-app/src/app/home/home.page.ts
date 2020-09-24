@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, OnInit, OnDestroy } from '@angular/core';
 
 import { ArticlesService } from '../shared/articles.service';
-import { Article } from './article';
+import { Issue, Article } from '../shared/models';
 
 import { StateService } from '../shared/state.service';
 import { Subscription, combineLatest } from 'rxjs';
@@ -12,7 +12,6 @@ import { Subscription, combineLatest } from 'rxjs';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit, AfterViewInit {
-
 
   currentArticles: Partial<Article>[];
   issue: any;

@@ -17,7 +17,7 @@ export class ArticleTeaserComponent implements AfterViewInit {
 
   @Input() articles: Article[];
   @Input() issue: any;
-  @Input() donate: any;
+  // @Input() donate: any;
   @Input() hasMore: boolean;
   @Input() intended: boolean;
 
@@ -30,6 +30,7 @@ export class ArticleTeaserComponent implements AfterViewInit {
   ) { }
 
   ngAfterViewInit() {
+    console.log(this.issue);
     this.slider.getActiveIndex().then(index => {
       this.state.activeSlideIndex.next(0);
     });

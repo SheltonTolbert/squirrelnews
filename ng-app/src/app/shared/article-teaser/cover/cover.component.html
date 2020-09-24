@@ -10,7 +10,7 @@
   <div class="issue-image" [ngStyle]="{
     'background': 'url(' + data.image + ') no-repeat top center',
     'background-size': 'cover'}">
-
+    <div class="photo-credit">{{ ("article.photo" | translate | async) }} via <a [href]="data.issueURL" target="_blank">Squirrel-News.net</a> </div>
   </div>
 </div>
 
