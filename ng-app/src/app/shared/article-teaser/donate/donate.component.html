@@ -5,14 +5,16 @@
   </div>
 
   <div class="text-wrapper">
-    <div class="category">
+    <!-- <div class="category">
       {{ data ? (data.case | uppercase) : ('donate.ownCase' | translate | async | uppercase) }}
-    </div>
+    </div> -->
     <div class="title">
-      {{ data ? (data.title | uppercase) : ('donate.title' | translate | async | uppercase) }}
+      <h2>
+        {{ data ? (data.title | uppercase) : ('donate.title' | translate | async | uppercase) }}
+      </h2>
     </div>
     <p>
-      {{ data ? (data.text | uppercase) : ('donate.text' | translate | async | uppercase) }}
+      {{ data ? (data.text ) : ('donate.text' | translate | async) }}
     </p>
   </div>
 </div>

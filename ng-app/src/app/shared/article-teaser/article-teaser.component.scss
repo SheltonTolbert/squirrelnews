@@ -1,17 +1,16 @@
 ion-slides {
-  top: -90px;
+  top: -60px;
   // padding-bottom: 75px;
     --bullet-background-active: black;
-
 }
 
 .swiper-pagination-bullets {
   position: absolute;
-  top: calc(90vh - 90px);
+  top: calc(90vh - 80px);
 }
 
 .swiper-slide, .swiper-pagination {
-  bottom: -30px !important;
+  bottom: 30px !important;
 }
 
 .logo-image {

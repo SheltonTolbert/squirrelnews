@@ -7,7 +7,9 @@ export interface Issue {
   publishedAt: Date;
   title: string;
   issueURL: string;
-  donate?: Donate;
+  showDonation: boolean;
+  donationTitle: string;
+  donationText: string;
   articles: Article[];
 }
 
@@ -31,5 +33,5 @@ export interface Article {
 export interface Donate {
   title: string;
   text: string;
-  case: string;
+  case?: string;
 }

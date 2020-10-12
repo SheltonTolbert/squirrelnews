@@ -4,6 +4,7 @@ import { Plugins } from '@capacitor/core';
 import { StateService } from '../state.service';
 import { IonSlides } from '@ionic/angular';
 import { skip, tap } from 'rxjs/operators';
+import { Donate } from '../models';
 
 
 const { Browser } = Plugins;
@@ -30,7 +31,6 @@ export class ArticleTeaserComponent implements AfterViewInit {
   ) { }
 
   ngAfterViewInit() {
-    console.log(this.issue);
     this.slider.getActiveIndex().then(index => {
       this.state.activeSlideIndex.next(0);
     });

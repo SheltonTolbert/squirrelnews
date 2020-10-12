@@ -1,14 +1,14 @@
-<ion-slides #articleSlider (ionSlideDidChange)="handleSlideChange()" pager>
+<ion-slides #articleSlider (ionSlideDidChange)="handleSlideChange()" pager [ngClass]="{ 'home': intended }" >
   <ng-container *ngIf="articles && articles.length > 0; else noArticles">
-    <ion-slide>
+    <!-- <ion-slide>
       <app-cover [data]="issue"></app-cover>
-    </ion-slide>
+    </ion-slide> -->
     <ion-slide *ngFor="let article of articles" (click)="openBrowser(article.url)">
       <app-article [intended]="intended" [article]="article" [issueTitle]="issue.title"></app-article>
     </ion-slide>
   </ng-container>
-  <ion-slide *ngIf="issue">
-    <app-donate [data]="issue.donate || null"></app-donate>
+  <ion-slide *ngIf="issue && issue.showDonation">
+    <app-donate [data]="{ title: issue.donationTitle, text: issue.donationText }"></app-donate>
   </ion-slide>
   <ion-slide *ngIf="hasMore">
     <app-more></app-more>
@@ -18,7 +18,7 @@
 <ng-template #noArticles>
   <ion-slide>
     <div class="wrapper-article">
-        <img class="logo-image" src="assets/icon/squirrel-news-logo.svg" alt="Squirrel News Logo">
+        <img class="logo-image" src="assets/icon/squirrel-news-logo.svg" alt="Squirrel News Logo" />
         {{ 'issues.noMoreIssue' | translate | async }}
     </div>
   </ion-slide>
