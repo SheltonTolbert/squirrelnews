@@ -50,7 +50,11 @@ export class MorePage implements OnInit {
   }
 
   openFavorites() {
-    this.nav.navigateForward('tabs/home/favorites');
+    this.nav.navigateForward('tabs/more/favorites');
+  }
+
+  openAll() {
+    this.nav.navigateForward('tabs/more/all');
   }
 
   open(path: string) {

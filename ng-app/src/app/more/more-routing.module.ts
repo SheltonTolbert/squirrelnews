@@ -32,6 +32,14 @@ const routes: Routes = [
     path: 'about-de',
     loadChildren: () => import('./about-de/about-de.module').then( m => m.AboutDePageModule)
   },
+  {
+    path: 'all',
+    loadChildren: () => import('../shared/all/all.module').then( m => m.AllPageModule )
+  },
+  {
+    path: 'favorites',
+    loadChildren: () => import('../shared/favorites/favorites.module').then( m => m.FavoritesPageModule )
+  }
 ];
 
 @NgModule({

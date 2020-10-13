@@ -45,6 +45,10 @@ export class ArticleTeaserComponent implements AfterViewInit {
     await Browser.open({ url });
   }
 
+  openInExternalBrowser(url: string) {
+    window.open(url, '_system', 'location=yes' );
+  }
+
   handleSlideChange() {
     this.slider.getActiveIndex().then(index => {
       this.state.activeSlideIndex.next(index);

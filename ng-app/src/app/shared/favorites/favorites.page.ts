@@ -21,7 +21,7 @@ export class FavoritesPage {
   favorites: Observable<Article[]>;
 
   openDetail(article) {
-    this.nav.navigateForward(`tabs/home/favorites/${article.title}`, { state: article });
+    this.nav.navigateForward(`tabs/more/favorites/${article.title}`, { state: article });
   }
 
   ionViewWillEnter() {

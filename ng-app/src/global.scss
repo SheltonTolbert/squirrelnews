@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -25,8 +25,13 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+ion-toolbar {
+  --opacity: 0;
+  --border-style: none;
+}
+
 ion-toolbar.home {
-  --background: rgba(0,0,0,0);
+  --background: rgba(0, 0, 0, 0);
   --color: #fff;
   --border-style: none;
 }
@@ -36,25 +41,21 @@ ion-slides {
 }
 
 ion-tab-bar {
-  --background: rgb(240,240,233);
+  --background: rgb(240, 240, 233);
 }
 
 ion-page {
   height: 100vh;
 }
 
-
 :root {
-  --ion-font-family: 'Lato'
+  --ion-font-family: "Lato";
 }
 
 .wrapper-article {
   width: 100%;
 }
 
-
-
-main {/* Old browsers */
-
+main {
+  /* Old browsers */
 }
-

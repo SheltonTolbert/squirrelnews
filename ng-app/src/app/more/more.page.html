@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-title>Squirrel News</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,6 +14,15 @@
           {{ 'lang.switch' | translate | async }}
         </h2>
       </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="8" offset="2" (click)="openAll()">
+        <ion-button fill="clear" color="dark" expand="block">
+          <h2>
+            {{ 'issues.all' | translate | async }}
+          </h2>
+        </ion-button>
       </ion-col>
     </ion-row>
     <ion-row>

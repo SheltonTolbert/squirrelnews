@@ -5,16 +5,22 @@ ion-item {
 .teaser {
   line-height: 20px;
   font-size: 1em;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 
-  h6 {
+  .date {
     line-height: 10px;
     font-size: 0.8em;
+    margin-bottom: 5px;
   }
 }
 
 .teaser-img {
   width: 100px;
-  height: 130px;
+  height: 100px;
   background-size: cover;
 }
 

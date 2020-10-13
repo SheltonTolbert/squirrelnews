@@ -34,4 +34,5 @@ export interface Donate {
   title: string;
   text: string;
   case?: string;
+  url: string;
 }

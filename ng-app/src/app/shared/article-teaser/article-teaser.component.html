@@ -7,7 +7,7 @@
       <app-article [intended]="intended" [article]="article" [issueTitle]="issue.title"></app-article>
     </ion-slide>
   </ng-container>
-  <ion-slide *ngIf="issue && issue.showDonation">
+  <ion-slide *ngIf="issue && issue.showDonation" (click)="openInExternalBrowser(issue.donationUrl)">
     <app-donate [data]="{ title: issue.donationTitle, text: issue.donationText }"></app-donate>
   </ion-slide>
   <ion-slide *ngIf="hasMore">
