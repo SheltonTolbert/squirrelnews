@@ -84,7 +84,7 @@ export const createNewIssue = functions.https.onRequest(async (request, response
         image: request.body.image || null,
         imageCredit: request.body.imageCredit || null,
         issueURL: request.body.issueURL || null,
-        showDonation: false,
+        showDonation: true,
         donationText: donationText,
         donationTitle: donationTitle,
         donationUrl: donationURL
