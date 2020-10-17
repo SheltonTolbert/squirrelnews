@@ -65,11 +65,11 @@ export const createNewIssue = functions.https.onRequest(async (request, response
       const pubAt = request.body.language === 'de' ? new Date(`${ds[1]}/${parseInt(ds[0])}/${ds[2]}`)
                                                   : new Date(`${ds[1]}/${parseInt(ds[0])}/${ds[2]}`);
 
-      const donationTitle = request.body.language === 'de' ? 'Unterstütze uns!'
+      const donationTitle = request.body.language === 'de' ? 'Unterstützt uns!'
                                                             : 'Support us!';
 
       const donationText = request.body.language === 'de' ? 'Squirrel News finanziert sich ausschließlich aus kleinen und mittleren Spenden. Dafür brauchen wir auch dich! Bitte unterstütze uns mit einem monatlichen oder jährlichen Betrag in der Höhe deiner Wahl!'
-                                                          : 'Squirrel News financed exclusively by small and medium-sized donations. By donating the cost of a cup of coffee (or two) each month, you’re helping us to continue our work and keep Squirrel News running ad-free!';
+                                                          : 'Squirrel News is financed exclusively by small and medium-sized donations. By donating the cost of a cup of coffee (or two) each month, you’re helping us to continue our work and keep Squirrel News running ad-free!';
                                                           
       const donationURL = request.body.language === 'de' ? 'https://squirrel-news.net/de/unterstuetzen/'
                                                           : 'https://squirrel-news.net/support-us/';
