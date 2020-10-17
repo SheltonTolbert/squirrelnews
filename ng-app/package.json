@@ -1,6 +1,6 @@
 {
   "name": "squirrelnews-app",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
@@ -30,7 +30,7 @@
     "@ionic-native/status-bar": "^5.24.0",
     "@ionic/angular": "^5.2.3",
     "core-js": "^3.6.5",
-    "firebase": "^7.14.1",
+    "firebase": "^7.23.0",
     "rxjs": "^6.5.5",
     "tslib": "^1.11.1",
     "zone.js": "~0.10.3"
@@ -44,8 +44,8 @@
     "@angular/compiler": "~10.0.4",
     "@angular/compiler-cli": "~10.0.4",
     "@angular/language-service": "~10.0.4",
-    "@capacitor/cli": "2.0.1",
-    "@ionic/angular-toolkit": "^2.2.0",
+    "@capacitor/cli": "^2.4.2",
+    "@ionic/angular-toolkit": "^2.3.3",
     "@types/jasmine": "~3.5.10",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^13.13.0",
