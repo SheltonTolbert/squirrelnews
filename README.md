@@ -37,7 +37,7 @@ The Frontend uses Angular Fire and is configured in Firebase as a Webapp as we a
 
 besides the 'ng-app' folder there is also an **admin.app** folder which contains another application, which will provide the possibility to manage issues and articles, like editing, creating and publishing.
 
-## Firebase 
+## Firebase (Functions)
 
 We are using Firebase as our Application Cloud Backend. So far we are using 
 
