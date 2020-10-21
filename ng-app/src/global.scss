@@ -36,8 +36,10 @@ ion-toolbar.home {
   --border-style: none;
 }
 
+//the extra height here pushes the pager closer to the bottom of the page
 ion-slides {
   --bullet-background-active: black;
+  height: 110%;
 }
 
 ion-tab-bar {
@@ -58,4 +60,43 @@ ion-page {
 
 main {
   /* Old browsers */
+}
+
+
+/*display specific fixes
+    |       |       |
+    V       V       V
+*/
+
+/*fix for small mobile screens (iphone 5/se).
+Adjusts height of ion-slides and the verticle 
+position of the pager to keep pager in view.
+*/
+@media only screen and (max-height: 570px){
+  ion-slides {
+    --bullet-background-active: black;
+    height: auto;
+  }
+
+  .swiper-slide, .swiper-pagination {
+    bottom: 40px !important;
+  }
+  
+}
+
+
+/*fix for larger tablet screens (ipad pro).
+Adjusts height of ion-slides and the verticle 
+position of the pager to keep pager in view.
+*/
+@media only screen and (min-height: 1350px){
+  ion-slides {
+    --bullet-background-active: black;
+    height: 105%;
+  }
+
+  .swiper-slide, .swiper-pagination {
+    bottom: 0px !important;
+  }
+  
 }
